@@ -51,15 +51,12 @@ let h5 = document.querySelectorAll('h5');
 
 // Criando loop para atribuir os novos conteúdos da listadeFelinos as variáveis criadas anteriormente.
 // No html temos 9 article e aqui na listadeFelinos temos 6 itens.
-for(let i = 0; i <= listadeFelinos.length; i++) {
+listadeFelinos.forEach((item, i) => {
     h2[i].innerHTML = listadeFelinos[i].title;
     p[i].innerHTML = listadeFelinos[i].description;
     img[i].src = listadeFelinos[i].imgUrl;
     h5[i].innerHTML = listadeFelinos[i].createdAt;
-}
-
-
-    
+})
 
 
 
